@@ -5,4 +5,8 @@ export default defineNuxtConfig({
     "nuxt-graphql-client",
     "@nuxt/ui",
   ],
+
+  "graphql-client": {
+    codegen: false
+  }
 })
