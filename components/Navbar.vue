@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-  const value = ref("")
   const colorMode = useColorMode()
   const isDark = computed({
     get () {
@@ -8,10 +7,6 @@
     set () {
       colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
     }
-  })
-
-  watch(value,(value) => {
-    console.log(value)
   })
 </script> 
 
@@ -25,7 +20,7 @@
           </NuxtLink>
         </div>
         <div class="col-span-2 md:col-span-1">
-          <UInput type="search" v-model="value" placeholder="Search Character" size="lg"/>
+          <SearchBar/>
         </div>
         <div class="justify-self-end row-start-1 col-start-2 md:row-auto md:col-auto ">
           <ClientOnly>
