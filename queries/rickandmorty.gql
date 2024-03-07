@@ -1,5 +1,5 @@
-query GetCharacters($page: Int) {
-  characters(page: $page, filter: { name: "rick" }) {
+query GetCharacters($page: Int, $name: String) {
+  characters(page: $page, filter: { name: $name }) {
     info {
       count
       pages
@@ -7,9 +7,29 @@ query GetCharacters($page: Int) {
     results {
       name
       image
+      id
       origin {
         dimension
       }
+    }
+  }
+}
+
+query GetCharacter($id: ID!) {
+  character(id : $id) {
+    name
+    image
+    status
+    gender
+    species
+    location {
+      dimension
+      name
+      type
+    }
+    episode {
+      name
+      air_date
     }
   }
 }
