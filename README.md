@@ -1,6 +1,5 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Rick and Morty characters gallery
+Rick and morty gallery using Nuxt 3, [GRAPHQL Rick and Morty API](https://rickandmortyapi.com/documentation/#graphql) and Nuxt UI.
 
 ## Setup
 
